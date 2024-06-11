@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- divinectorweb.com -->     
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANJANA P</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+
+
+    <header>
+
+                
+
+        <!-- <div class="logo">
+            <i class="fa-solid fa-a"></i>
+            <div class="logo-text">Anjana P</div>
+        </div> -->
+        <nav>
+            <div class="togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="time">
+            <h6 id="currentTime"></h6>
+        
+            <script>
+        
+                function putzero(nm){
+                    return nm<10?"0"+nm:nm;
+                }
+        
+        
+                function showTime(){
+                    var dt=new Date();
+                    var timeElement=document.getElementById("currentTime");
+                    var hours=dt.getHours();
+        
+                    var amOrpm =hours>12?"pm":"am";
+        
+                    var dateString= putzero(hours%12) +": "+putzero(dt.getMinutes())+" :" +putzero(dt.getSeconds())+" "+ amOrpm;
+                    timeElement.innerHTML=dateString;
+        
+        
+                    setTimeout(function(){
+                        showTime();
+                    },1000);
+                }
+                showTime();
+            </script>
+           </div>
+
+    </header>
+    <div class="container">
+        <div class="hero-pic">
+            <img src="123.jpg" alt="profile pic">
+            
+        </div>
+        <div class="hero-text">
+            <h5>Hi I'm <span class="input">Fullstack Developer</span></h5>
+            <h1>Anjana P</h1>
+            <p>I am a fullstack developer, and im very passionate and dedicated to my work. I have acquired the skills and knowledge neccessary to make your project a success. I enjoy every step of web design process, from discussion and collaboration to concept and execution.</p>
+            <div class="btn-group">
+                <a href="resume.html" class="btn active">Download CV</a>
+                <a href="contact.html" class="btn">Contact</a>
+            </div>
+
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=61560575578620"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/anjana-p26"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anjana-p-759534306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ikigai_15k?igsh=eWJmbHNwN201MnVr"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            
+        </div>
+    
+    </div>
+
+    <!-- <div class="hero-header">
+        <div class="wrapper">
+            
+        </div>
+        
+    </div> -->
+
+
+    <!-- typed js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /*creating button click show hide navbar*/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Fullstack Developer","Frontend Developer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+    </script>
+</body>
+</html>
